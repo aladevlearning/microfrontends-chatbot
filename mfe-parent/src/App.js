@@ -11,7 +11,18 @@ import theme from 'src/theme';
 import routes from 'src/routes';
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
+Amplify.configure({
+  ...awsconfig,
+  Interactions: {
+    bots: {
+      "DeployMicroFrontendVOne": {
+        "name": "DeployMicroFrontendVOne",
+        "alias": "$LATEST",
+        "region": "eu-west-1",
+      },
+    }
+  }
+});
 
 function App() {
   const [authState, setAuthState] = React.useState();

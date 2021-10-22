@@ -1,0 +1,11 @@
+{
+  "name": "lex-chatbot-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lexHandler.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-codepipeline": "3.37.0"
+  }
+}
